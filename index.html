@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Privacy Policy for Calculator Pro - A fully offline calculator app. Zero data collection."/>
+<meta name="robots" content="index, follow"/>
+<title>Privacy Policy — Calculator Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0f1923;--slate:#1e3a4f;--mid:#2c5f7a;--teal:#0097a7;--teal-bright:#00bcd4;
+  --teal-pale:#e0f7fa;--teal-xpale:#f0fdff;--green:#00897b;--green-pale:#e8f5e9;
+  --amber:#f57c00;--amber-pale:#fff8e1;--text:#1a2e3d;--text-mid:#2e4d63;
+  --text-light:#607d8b;--border:#cfe8f0;--bg:#eef6fa;--white:#fff;
+  --r:9px;--font:'Outfit',sans-serif;--mono:'JetBrains Mono',monospace
+}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.75;-webkit-text-size-adjust:100%;padding:clamp(8px,3vw,24px) clamp(8px,3vw,20px)}
+.page{max-width:880px;margin:0 auto;background:var(--white);border-radius:18px;box-shadow:0 4px 36px rgba(0,100,130,.11);overflow:hidden}
+
+/* Header */
+.hdr{background:linear-gradient(145deg,#071520 0%,#0a2535 35%,#0d4060 65%,#0097a7 100%);padding:clamp(32px,7vw,60px) clamp(20px,6vw,48px) clamp(26px,6vw,48px);text-align:center;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 15% 85%,rgba(0,188,212,.2) 0%,transparent 65%),radial-gradient(ellipse 45% 55% at 85% 15%,rgba(0,150,180,.12) 0%,transparent 65%)}
+.hdr::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='48' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E")}
+.hdr-inner{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:99px;margin-bottom:18px}
+.app-icon{font-size:clamp(36px,8vw,56px);margin-bottom:10px;display:block;filter:drop-shadow(0 4px 16px rgba(0,200,220,.3))}
+.hdr h1{font-size:clamp(24px,6vw,42px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:6px;line-height:1.15}
+.hdr h1 span{color:#4dd0e1}
+.hdr-sub{font-size:clamp(12px,2.5vw,15px);color:rgba(255,255,255,.72);margin-top:4px}
+
+/* Meta */
+.meta{display:flex;flex-wrap:wrap;background:#f7fcfd;border-bottom:1px solid var(--border)}
+.meta-item{flex:1 1 auto;min-width:100px;padding:14px 16px;text-align:center;border-right:1px solid var(--border);font-size:12px;color:var(--text-light)}
+.meta-item:last-child{border-right:none}
+.meta-item strong{display:block;color:var(--teal);font-size:13.5px;font-weight:700;margin-bottom:2px}
+
+/* Content */
+.content{padding:clamp(22px,5vw,44px) clamp(16px,5vw,44px)}
+.intro{background:var(--teal-xpale);border-left:4px solid var(--teal-bright);border-radius:0 var(--r) var(--r) 0;padding:clamp(14px,3vw,20px) clamp(16px,3vw,22px);margin-bottom:30px;font-size:14.5px;color:var(--mid);line-height:1.72}
+.intro strong{color:var(--teal)}
+
+/* Summary */
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;margin-bottom:36px}
+.sum-card{background:var(--teal-xpale);border:1px solid #b2e0ea;border-radius:var(--r);padding:14px 16px;display:flex;align-items:flex-start;gap:12px}
+.sum-icon{font-size:22px;flex-shrink:0;margin-top:1px}
+.sum-card strong{display:block;color:var(--ink);font-size:13px;font-weight:700;margin-bottom:3px}
+.sum-card span{font-size:12px;color:var(--text-light);line-height:1.5}
+
+/* TOC */
+.toc{background:#f7fcfd;border:1px solid var(--border);border-radius:var(--r);padding:clamp(16px,3vw,24px) clamp(18px,3vw,28px);margin-bottom:36px}
+.toc h3{font-size:13px;font-weight:700;color:var(--teal);margin-bottom:14px;text-transform:uppercase;letter-spacing:.07em}
+.toc ol{padding-left:18px;margin:0;columns:2;column-gap:32px}
+.toc li{margin-bottom:6px;font-size:13.5px;break-inside:avoid}
+.toc a{color:var(--text-mid);text-decoration:none;transition:color .2s}
+.toc a:hover{color:var(--teal-bright)}
+
+/* Sections */
+.section{margin-bottom:clamp(30px,5vw,48px)}
+.section h2{font-size:clamp(17px,3.5vw,21px);font-weight:700;color:var(--ink);margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--teal-pale);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.num{background:var(--teal);color:#fff;min-width:32px;height:32px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;font-family:var(--mono)}
+.section h3{font-size:clamp(14px,2.5vw,15.5px);font-weight:700;color:var(--text);margin:20px 0 10px}
+p{margin-bottom:12px;font-size:clamp(13.5px,2vw,15px);color:var(--text-mid);line-height:1.78}
+ul,ol{margin:10px 0 16px;padding-left:clamp(16px,4vw,22px)}
+li{margin-bottom:9px;font-size:clamp(13.5px,2vw,14.5px);color:var(--text-mid);line-height:1.7}
+li strong{color:var(--mid)}
+
+/* Tables */
+.table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r);box-shadow:0 1px 5px rgba(0,0,0,.07);margin:16px 0 20px}
+table{width:100%;min-width:420px;border-collapse:collapse;font-size:clamp(12px,1.8vw,13.5px)}
+thead{background:var(--teal)}
+th{padding:clamp(10px,2vw,13px) clamp(10px,2vw,16px);text-align:left;font-weight:600;color:#fff;white-space:nowrap}
+td{padding:clamp(10px,2vw,12px) clamp(10px,2vw,16px);border-bottom:1px solid var(--border);color:var(--text-mid);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#f7fcfd}
+td code{font-family:var(--mono);font-size:11.5px;background:var(--teal-xpale);color:var(--mid);padding:2px 7px;border-radius:4px}
+
+/* Boxes */
+.box{border-radius:0 var(--r) var(--r) 0;padding:clamp(12px,3vw,18px) clamp(14px,3vw,20px);margin:16px 0 20px;font-size:clamp(13px,1.9vw,14px);line-height:1.7}
+.box .box-title{font-weight:700;display:block;margin-bottom:7px}
+.box ul{margin-bottom:0}
+.box-green{background:var(--green-pale);border-left:4px solid #43a047}.box-green .box-title{color:var(--green)}
+.box-teal{background:var(--teal-xpale);border-left:4px solid var(--teal-bright)}.box-teal .box-title{color:var(--teal)}
+.box-amber{background:var(--amber-pale);border-left:4px solid var(--amber)}.box-amber .box-title{color:var(--amber)}
+
+/* Contact */
+.contact-box{background:#f7fcfd;border:1px solid var(--border);border-radius:var(--r);padding:clamp(16px,3vw,24px);margin:16px 0}
+.contact-box p{margin-bottom:8px;font-size:clamp(13px,2vw,14.5px)}
+.contact-box a{color:var(--teal-bright);font-weight:600;text-decoration:none}
+.contact-box a:hover{text-decoration:underline}
+
+/* Footer */
+.footer{text-align:center;padding:clamp(20px,4vw,32px) 20px;background:#f4fbfc;border-top:1px solid var(--border)}
+.footer p{font-size:12.5px;color:var(--text-light);margin-bottom:5px}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 6px}
+.pill{background:var(--teal-pale);color:var(--teal);font-size:11.5px;font-weight:700;padding:4px 14px;border-radius:99px;letter-spacing:.03em}
+
+@media(max-width:500px){.toc ol{columns:1}.meta-item{border-right:none;border-bottom:1px solid var(--border)}.meta-item:last-child{border-bottom:none}.summary{grid-template-columns:1fr}}
+@media print{body{background:#fff;padding:0}.page{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="badge">🔒 Privacy Policy</div>
+    <h1>Calculator <span>Pro</span></h1>
+    <p class="hdr-sub">Offline Calculator &nbsp;·&nbsp; Zero Data Collection &nbsp;·&nbsp; No Internet Access</p>
+  </div>
+</div>
+
+<!-- Meta -->
+<div class="meta">
+  <div class="meta-item"><strong>Mar 2, 2026</strong>Effective Date</div>
+  <div class="meta-item"><strong>Mar 2, 2026</strong>Last Updated</div>
+  <div class="meta-item"><strong>Version 1.0</strong>Current Policy</div>
+  <div class="meta-item"><strong>BytXen</strong>Developer</div>
+</div>
+
+<div class="content">
+
+  <!-- Intro -->
+  <div class="intro">
+    <strong>Your Privacy is Guaranteed.</strong> Calculator Pro ("the App", "we", "our") is a fully offline utility app. It does not collect, store remotely, or transmit any personal data. This policy explains exactly what information the App accesses, why, and how it is protected — all of it stays on your device.
+  </div>
+
+  <!-- Summary cards -->
+  <div class="summary">
+    <div class="sum-card"><span class="sum-icon">🚫</span><div><strong>Zero Data Collection</strong><span>No personal data collected, ever</span></div></div>
+    <div class="sum-card"><span class="sum-icon">📡</span><div><strong>No Internet Access</strong><span>INTERNET permission not requested</span></div></div>
+    <div class="sum-card"><span class="sum-icon">🗂️</span><div><strong>Local History Only</strong><span>Calculation history stays on your device</span></div></div>
+    <div class="sum-card"><span class="sum-icon">🔍</span><div><strong>No Ads or Tracking</strong><span>Zero third-party SDKs or analytics</span></div></div>
+    <div class="sum-card"><span class="sum-icon">🎛️</span><div><strong>User Control</strong><span>Clear your history anytime from settings</span></div></div>
+    <div class="sum-card"><span class="sum-icon">👶</span><div><strong>Safe for All Ages</strong><span>Compliant with children's privacy laws</span></div></div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Information We Access</a></li>
+      <li><a href="#s2">Information We Do NOT Collect</a></li>
+      <li><a href="#s3">How We Use Information</a></li>
+      <li><a href="#s4">Data Storage &amp; Security</a></li>
+      <li><a href="#s5">Permissions Explained</a></li>
+      <li><a href="#s6">Third-Party Services</a></li>
+      <li><a href="#s7">Data Sharing &amp; Disclosure</a></li>
+      <li><a href="#s8">Your Rights &amp; Controls</a></li>
+      <li><a href="#s9">Children's Privacy</a></li>
+      <li><a href="#s10">Changes to This Policy</a></li>
+      <li><a href="#s11">Legal Compliance</a></li>
+      <li><a href="#s12">Contact Information</a></li>
+    </ol>
+  </div>
+
+  <!-- S1 -->
+  <div id="s1" class="section">
+    <h2><span class="num">01</span>Information We Access</h2>
+    <p>Calculator Pro accesses only the following minimal, on-device information needed to operate. Nothing is ever sent externally.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Data Type</th><th>Purpose</th><th>Stored Externally?</th></tr></thead>
+        <tbody>
+          <tr><td>Calculation inputs &amp; results</td><td>Perform calculations and display results in real time</td><td>Never</td></tr>
+          <tr><td>Calculation history</td><td>Allow you to review past calculations within the app</td><td>Never — local only</td></tr>
+          <tr><td>User preferences (theme, display settings)</td><td>Remember your chosen app settings between sessions</td><td>Never — local only</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="box box-green">
+      <span class="box-title">✅ Technical Guarantee</span>
+      The App does <strong>not</strong> request the <code>android.permission.INTERNET</code> permission. Without this permission, it is technically <em>impossible</em> for the App to send any data off your device.
+    </div>
+  </div>
+
+  <!-- S2 -->
+  <div id="s2" class="section">
+    <h2><span class="num">02</span>Information We Do NOT Collect</h2>
+    <p>Calculator Pro does <strong>not</strong> access, collect, or process any of the following:</p>
+    <ul>
+      <li>Personal identifiers (name, email address, phone number, postal address)</li>
+      <li>Location data (GPS, network-based, or IP-based)</li>
+      <li>Photos, videos, or media files</li>
+      <li>Contacts or call logs</li>
+      <li>SMS, MMS, or messaging content</li>
+      <li>Browsing history or web activity</li>
+      <li>Financial or payment information</li>
+      <li>Health or biometric data</li>
+      <li>Audio recordings or microphone data</li>
+      <li>Camera images or video</li>
+      <li>Device identifiers (IMEI, advertising ID, or similar)</li>
+      <li>IP address or network information</li>
+    </ul>
+    <div class="box box-teal">
+      <span class="box-title">ℹ️ Zero-Server Architecture</span>
+      We do not operate any servers, cloud infrastructure, or databases for this App. There is no backend to send data to.
+    </div>
+  </div>
+
+  <!-- S3 -->
+  <div id="s3" class="section">
+    <h2><span class="num">03</span>How We Use Information</h2>
+    <p>The only data the App touches is what you type into the calculator. Here is exactly how it is used — entirely on your device:</p>
+    <ul>
+      <li><strong>Calculations:</strong> Numbers and expressions you enter are processed in real time on your device to produce results. Nothing is logged or recorded remotely.</li>
+      <li><strong>Calculation History:</strong> Previous calculations are saved in the App's private local database so you can scroll back through past results. This history never leaves your device and can be cleared by you at any time.</li>
+      <li><strong>Preferences:</strong> Settings such as your chosen theme, sound, or vibration preferences are saved locally in Android's <code>SharedPreferences</code> so the App remembers your setup between sessions.</li>
+      <li><strong>Tactile Feedback:</strong> If enabled, the App triggers your device's vibration motor when a button is pressed. No data is recorded from this interaction.</li>
+    </ul>
+    <div class="box box-teal">
+      <span class="box-title">ℹ️ No Secondary Use</span>
+      We do not aggregate, analyze, or profile your usage for any purpose beyond making the calculator work on your screen.
+    </div>
+  </div>
+
+  <!-- S4 -->
+  <div id="s4" class="section">
+    <h2><span class="num">04</span>Data Storage &amp; Security</h2>
+    <h3>Local Storage Only</h3>
+    <ul>
+      <li><strong>RAM only during a session:</strong> Calculations in progress are held in device memory and discarded when you close the App.</li>
+      <li><strong>Private local database:</strong> Calculation history is stored in a private SQLite database inside the App's sandboxed storage area on your device — inaccessible to other apps.</li>
+      <li><strong>SharedPreferences:</strong> Your app settings are stored in the App's private sandboxed preferences, not accessible outside the App.</li>
+      <li><strong>No external storage:</strong> We write nothing to your SD card, shared storage, cloud services, or remote servers.</li>
+    </ul>
+    <h3>Security Measures</h3>
+    <ul>
+      <li><strong>Android Sandbox:</strong> The App runs in Android's application sandbox, isolating it from other apps and system components.</li>
+      <li><strong>No network transmission:</strong> Without the INTERNET permission, no data can physically leave your device.</li>
+      <li><strong>No third-party SDKs:</strong> No external libraries are included that could access or transmit data.</li>
+    </ul>
+    <div class="box box-green">
+      <span class="box-title">🔐 Data Retention</span>
+      Your calculation history is retained locally on your device until you choose to clear it. We hold no copies of it anywhere. Uninstalling the App deletes all local data permanently.
+    </div>
+  </div>
+
+  <!-- S5 -->
+  <div id="s5" class="section">
+    <h2><span class="num">05</span>Permissions Explained</h2>
+    <p>Calculator Pro requests the bare minimum permissions. Below is a full disclosure of every permission and its sole purpose:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Required?</th><th>Purpose</th><th>Impact if Denied</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>VIBRATE</code></td>
+            <td>Optional</td>
+            <td>Provides a brief tactile pulse when you press a button, giving physical feedback that a key was registered. No data is read or recorded.</td>
+            <td>The App works normally; button-press vibration will not occur.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Permissions We Deliberately Do NOT Request</h3>
+    <div class="box box-amber">
+      <span class="box-title">⚠️ Privacy Protections by Design</span>
+      The following permissions are intentionally absent from the App's manifest:
+      <ul style="margin-top:10px;margin-bottom:0">
+        <li><strong>INTERNET</strong> — Cannot send any data to external servers</li>
+        <li><strong>ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE</strong> — Cannot check network status</li>
+        <li><strong>READ/WRITE_EXTERNAL_STORAGE</strong> — Cannot access your files or photos</li>
+        <li><strong>CAMERA / RECORD_AUDIO</strong> — Cannot capture images or sound</li>
+        <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — Cannot track location</li>
+        <li><strong>READ_CONTACTS / READ_CALL_LOG / READ_SMS</strong> — Cannot access personal communications</li>
+        <li><strong>READ_PHONE_STATE</strong> — Cannot read device identifiers</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- S6 -->
+  <div id="s6" class="section">
+    <h2><span class="num">06</span>Third-Party Services</h2>
+    <p>Calculator Pro does <strong>not</strong> integrate any third-party services, SDKs, or libraries that could collect or transmit user data:</p>
+    <ul>
+      <li><strong>No analytics:</strong> No Google Analytics, Firebase Analytics, or any usage tracking</li>
+      <li><strong>No advertising:</strong> No AdMob, Meta Audience Network, or any ad SDK</li>
+      <li><strong>No crash reporting:</strong> No Crashlytics, Sentry, or remote crash reporting</li>
+      <li><strong>No cloud storage:</strong> No Firebase, Google Drive, or cloud sync</li>
+      <li><strong>No social SDKs:</strong> No Facebook, Twitter, or social login libraries</li>
+    </ul>
+    <h3>Libraries Used</h3>
+    <ul>
+      <li><strong>AndroidX Libraries:</strong> Standard Android UI support libraries — operate entirely offline, no data collection</li>
+      <li><strong>Material Design Components:</strong> Google's official UI library — no data transmission</li>
+    </ul>
+    <div class="box box-teal">
+      <span class="box-title">🔍 Verify It Yourself</span>
+      You can independently verify the absence of tracking SDKs by analyzing the APK with <strong>Exodus Privacy</strong> (exodus-privacy.eu.org).
+    </div>
+  </div>
+
+  <!-- S7 -->
+  <div id="s7" class="section">
+    <h2><span class="num">07</span>Data Sharing &amp; Disclosure</h2>
+    <h3>Zero Data Sharing Policy</h3>
+    <p>Calculator Pro does <strong>not</strong> share, sell, rent, trade, or otherwise disclose any user data to any third party under any circumstances. This is both a policy commitment and a technical reality — because we do not collect, possess, or have access to any user data to share.</p>
+    <h3>Legal Requests</h3>
+    <p>We cannot comply with requests from law enforcement, governments, or other parties for user data, because we do not possess any. All calculation data and history remain exclusively on your device.</p>
+    <h3>Business Transfers</h3>
+    <p>In the event of a merger, acquisition, or sale of assets, no user data would be transferred — because we collect and store none.</p>
+    <div class="box box-green">
+      <span class="box-title">🌐 Transparency Commitment</span>
+      If our data practices ever change to include any form of data collection or sharing, we will update this Privacy Policy, notify users through the App and Google Play Store, and obtain your consent before implementing any such change.
+    </div>
+  </div>
+
+  <!-- S8 -->
+  <div id="s8" class="section">
+    <h2><span class="num">08</span>Your Rights &amp; Controls</h2>
+    <h3>Calculation History</h3>
+    <ul>
+      <li><strong>View history:</strong> Scroll through past calculations within the App's history panel.</li>
+      <li><strong>Clear history:</strong> Delete your full calculation history at any time from within the App's settings or history screen.</li>
+    </ul>
+    <h3>Permission Management</h3>
+    <ul>
+      <li><strong>Vibration:</strong> Go to <em>Android Settings &rarr; Apps &rarr; Calculator Pro &rarr; Permissions</em> to enable or disable vibration at any time. The App functions fully without it.</li>
+    </ul>
+    <h3>Full Data Removal</h3>
+    <ul>
+      <li><strong>Clear Data:</strong> <em>Android Settings &rarr; Apps &rarr; Calculator Pro &rarr; Storage &rarr; Clear Data</em> — removes all history and preferences from your device instantly.</li>
+      <li><strong>Uninstall:</strong> Uninstalling the App permanently deletes all associated local data. Nothing remains on any server, because none exists.</li>
+    </ul>
+  </div>
+
+  <!-- S9 -->
+  <div id="s9" class="section">
+    <h2><span class="num">09</span>Children's Privacy</h2>
+    <p>Calculator Pro is suitable for all ages. The App does not knowingly collect personal information from anyone, including children under the age of 13 (or the applicable minimum age in your jurisdiction). Its offline, zero-collection design ensures compliance with:</p>
+    <ul>
+      <li><strong>COPPA</strong> — Children's Online Privacy Protection Act (USA)</li>
+      <li><strong>GDPR-K</strong> — GDPR provisions for children (EU)</li>
+      <li><strong>Age-Appropriate Design Code</strong> (UK)</li>
+    </ul>
+    <p>Parents and guardians can confidently allow children to use this App. It does not collect personal information, require account creation, display advertisements, contain in-app purchases, access the internet, or communicate with any external service.</p>
+    <div class="box box-teal">
+      <span class="box-title">👨‍👩‍👧 For Parents</span>
+      If you have any questions or concerns about your child's use of this App, please contact us at the email address in Section 12.
+    </div>
+  </div>
+
+  <!-- S10 -->
+  <div id="s10" class="section">
+    <h2><span class="num">10</span>Changes to This Policy</h2>
+    <h3>Policy Updates</h3>
+    <p>We may update this Privacy Policy from time to time to reflect changes in Android OS requirements, legal and regulatory obligations, new App features, or industry best practices.</p>
+    <h3>How We Notify You</h3>
+    <ul>
+      <li>We will update the "Last Updated" date at the top of this document.</li>
+      <li>We will post the revised policy on this page and in the App's Google Play Store listing.</li>
+      <li>For material changes that affect data collection practices, we will display an in-app notification before the changes take effect.</li>
+    </ul>
+    <div class="box box-amber">
+      <span class="box-title">💬 Our Core Commitment</span>
+      We will never introduce data collection, advertising, or tracking without explicit prior notice and user consent. Any such change would require a clear opt-in before taking effect.
+    </div>
+  </div>
+
+  <!-- S11 -->
+  <div id="s11" class="section">
+    <h2><span class="num">11</span>Legal Compliance</h2>
+    <h3>International Privacy Regulations</h3>
+    <p>This App is designed to comply with major international privacy regulations, including:</p>
+    <ul>
+      <li><strong>GDPR</strong> — General Data Protection Regulation (European Union)</li>
+      <li><strong>CCPA</strong> — California Consumer Privacy Act (California, USA)</li>
+      <li><strong>LGPD</strong> — Lei Geral de Proteção de Dados (Brazil)</li>
+      <li><strong>PIPEDA</strong> — Personal Information Protection and Electronic Documents Act (Canada)</li>
+      <li><strong>Privacy Act 1988</strong> (Australia)</li>
+    </ul>
+    <h3>Google Play Policy Compliance</h3>
+    <ul>
+      <li><strong>Google Play Developer Program Policies:</strong> This App and policy comply with Google Play's User Data, Permissions, and Privacy Policy requirements.</li>
+      <li><strong>Data Safety Section:</strong> The Data Safety declaration in the Google Play Store accurately reflects the App's data handling practices.</li>
+      <li><strong>Sensitive Permissions:</strong> All permissions are fully disclosed with justification above.</li>
+    </ul>
+    <h3>Privacy Principles Applied</h3>
+    <ul>
+      <li><strong>Privacy by Design:</strong> Privacy is a core architectural principle, not an afterthought.</li>
+      <li><strong>Data Minimization:</strong> Only the absolute minimum data necessary for functionality is accessed.</li>
+      <li><strong>Purpose Limitation:</strong> Data is used only for the stated purpose and nothing else.</li>
+    </ul>
+  </div>
+
+  <!-- S12 -->
+  <div id="s12" class="section">
+    <h2><span class="num">12</span>Contact Information</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the App's data practices, we are happy to help:</p>
+    <div class="contact-box">
+      <p><strong>Developer / Studio:</strong> BytXen</p>
+      <p><strong>Email:</strong> <a href="mailto:tech.bytxen01@gmail.com">tech.bytxen01@gmail.com</a></p>
+      <p><strong>App Name:</strong> Calculator Pro</p>
+      <p><strong>Response Time:</strong> We aim to respond to all inquiries within 48&ndash;72 hours.</p>
+    </div>
+    <h3>What to Include in Your Message</h3>
+    <p>To help us respond efficiently, please include your device model and Android version, the Calculator Pro app version (visible in the Play Store or App settings), and a clear description of your question or concern.</p>
+    <div class="box box-teal">
+      <span class="box-title">🛡️ Security Disclosures</span>
+      If you discover a security vulnerability or privacy concern, please report it responsibly to the email address above. We take all reports seriously and will respond promptly.
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p><strong>&copy; 2026 Calculator Pro. All rights reserved.</strong></p>
+  <p>This Privacy Policy is effective as of March 2, 2026 &nbsp;&middot;&nbsp; Version 1.0</p>
+  <div class="pills">
+    <span class="pill">🔒 Privacy-First</span>
+    <span class="pill">📵 Zero Data Collection</span>
+    <span class="pill">🌐 No Internet Access</span>
+    <span class="pill">🤝 Google Play Compliant</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
